@@ -6,12 +6,13 @@ import { HiFolderDownload } from "react-icons/hi";
 import { BsFillPrinterFill } from "react-icons/bs";
 import { MdOutlineSendToMobile } from "react-icons/md";
 import { TiDelete } from "react-icons/ti";
+import { Userss } from "../../API";
 
 const User = () => {
   const [modal, setModal] = useState(false);
   const { id } = useParams();
   const { user } = useSelector((state) => state.user);
-  const selectedUser = user.find((u) => u.id === parseInt(id));
+  const selectedUser = Userss.find((u) => u.id === parseInt(id));
 
   if (!selectedUser) {
     return <div>Loading...</div>;
@@ -22,14 +23,14 @@ const User = () => {
         <div className="user">
           <div className="user-text">
             <h2>{selectedUser.name}</h2>
-            <h2>{selectedUser.username}</h2>
-            <h2>{selectedUser.email}</h2>
+            <h2>{selectedUser.lastName}</h2>
+            <h2>{selectedUser.address}</h2>
             <h2>{selectedUser.phone}</h2>
-            <h2>{selectedUser.website}</h2>
+            <h2>{selectedUser.birth}</h2>
           </div>
           <img
-            // src={selectedUser.img}
-            src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/1200px-User_icon_2.svg.png"
+            src={selectedUser.img}
+            // src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/12/User_icon_2.svg/1200px-User_icon_2.svg.png"
             alt="img"
           />
         </div>
