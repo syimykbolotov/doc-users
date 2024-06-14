@@ -3,29 +3,44 @@ import { MdPersonSearch } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 const DataSearch = () => {
-  const [inputValue, setInputValue] = useState("");
+  const [inputValuePin, setInputValuePin] = useState("");
+  const [inputValueName, setInputValueName] = useState("");
+  const [inputValueLastName, setInputValueLastName] = useState("");
   const nav = useNavigate();
-  console.log(inputValue);
+
+  const btn = () => {
+    if (inputValueName === "" || inputValueLastName === "") {
+      alert("toltur");
+    } else {
+      nav("/users");
+    }
+  };
   return (
     <div id="dataSearch">
       <div className="container">
         <div className="dataSearch">
           <div className="dateInput">
             <label>ПИН</label>
-            <input type="text" />
+            <input
+              onChange={(e) => setInputValuePin(e.target.value)}
+              type="text"
+            />
           </div>
           <div className="dateInput">
             <label>Фамилия</label>
             <input
-              onChange={(e) => setInputValue(e.target.value)}
+              onChange={(e) => setInputValueLastName(e.target.value)}
               type="text"
             />
           </div>
           <div className="dateInput">
             <label>Имя</label>
-            <input type="text" />
+            <input
+              onChange={(e) => setInputValueName(e.target.value)}
+              type="text"
+            />
           </div>
-          <button onClick={() => nav("/users")}>
+          <button onClick={() => btn()}>
             <MdPersonSearch />
           </button>
         </div>
