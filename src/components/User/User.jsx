@@ -22,11 +22,26 @@ const User = () => {
       <div className="container">
         <div className="user">
           <div className="user-text">
-            <h2>{selectedUser.name}</h2>
-            <h2>{selectedUser.lastName}</h2>
-            <h2>{selectedUser.address}</h2>
-            <h2>{selectedUser.phone}</h2>
-            <h2>{selectedUser.birth}</h2>
+            <div className="user-card">
+              <span>Имя :</span>
+              <h2>{selectedUser.name}</h2>
+            </div>
+            <div className="user-card">
+              <span>Фамилия :</span>
+              <h2>{selectedUser.lastName}</h2>
+            </div>
+            <div className="user-card">
+              <span>Адрес :</span>
+              <h2>{selectedUser.address}</h2>
+            </div>
+            <div className="user-card">
+              <span>Телефон :</span>
+              <h2>{selectedUser.phone}</h2>
+            </div>
+            <div className="user-card">
+              <span>Ден рождении :</span>
+              <h2>{selectedUser.birth}</h2>
+            </div>
           </div>
           <img
             src={selectedUser.img}
