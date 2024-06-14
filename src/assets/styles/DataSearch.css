@@ -1,0 +1,38 @@
+#dataSearch {
+  padding: 30px 0;
+}
+
+.dataSearch {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.dataSearch h1 {
+  color: red;
+}
+
+.dataSearch button {
+  padding: 5px 20px;
+  font-size: 24px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 21px;
+  cursor: pointer;
+}
+
+.dateInput {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 4px;
+}
+
+.dateInput input {
+  padding: 6px;
+  width: 280px;
+  outline: none;
+  font-size: large;
+  border-radius: 8px;
+  border: 1px solid black;
+}
