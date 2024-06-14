@@ -13,6 +13,7 @@ const DataSearch = () => {
       alert("toltur");
     } else {
       nav("/users");
+    setInputValueLastName("");
     }
   };
   return (
