@@ -13,6 +13,15 @@
   gap: 20px;
 }
 
+.user-card {
+  display: flex;
+  align-items: center;gap: 10px;
+}
+.user-card span{
+  width: 180px;
+  font-size: 20px;
+  font-weight: 700;
+}
 .user-text h2 {
   border: 2px solid black;
   width: 400px;
