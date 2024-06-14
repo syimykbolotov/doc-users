@@ -10,9 +10,13 @@ import { Userss } from "../../API";
 
 const User = () => {
   const [modal, setModal] = useState(false);
-  const { id } = useParams();
+  const { id, pin } = useParams();
+
   const { user } = useSelector((state) => state.user);
-  const selectedUser = Userss.find((u) => u.id === parseInt(id));
+  const selectedUser = Userss.find(
+    (u) => u.id === parseInt(id) || u.pin === parseInt(pin)
+  );
+  // const selectedUser = Userss.find((u) => u.id === parseInt(id));
 
   if (!selectedUser) {
     return <div>Loading...</div>;

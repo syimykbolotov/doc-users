@@ -10,12 +10,23 @@ const DataSearch = () => {
 
   const btn = () => {
     if (inputValueName === "" || inputValueLastName === "") {
-      alert("toltur");
+      alert("Заполните Поле !!!");
     } else {
-      nav("/users");
-    setInputValueLastName("");
+      nav(`/search/${inputValueLastName}/${inputValueName}`);
+      setInputValueLastName("");
+      setInputValueName("");
     }
   };
+
+  const searchByPin = () => {
+    if (inputValuePin === "") {
+      alert("Заполните Поле !!!");
+    } else {
+      nav(`/user/pin/${inputValuePin}`);
+      setInputValuePin("");
+    }
+  };
+
   return (
     <div id="dataSearch">
       <div className="container">
@@ -25,6 +36,7 @@ const DataSearch = () => {
             <input
               onChange={(e) => setInputValuePin(e.target.value)}
               type="text"
+              value={inputValuePin}
             />
           </div>
           <div className="dateInput">
@@ -32,6 +44,7 @@ const DataSearch = () => {
             <input
               onChange={(e) => setInputValueLastName(e.target.value)}
               type="text"
+              value={inputValueLastName}
             />
           </div>
           <div className="dateInput">
@@ -39,11 +52,19 @@ const DataSearch = () => {
             <input
               onChange={(e) => setInputValueName(e.target.value)}
               type="text"
+              value={inputValueName}
             />
           </div>
-          <button onClick={() => btn()}>
-            <MdPersonSearch />
-          </button>
+
+          {inputValuePin ? (
+            <button onClick={searchByPin}>
+              <MdPersonSearch />
+            </button>
+          ) : (
+            <button onClick={btn}>
+              <MdPersonSearch />
+            </button>
+          )}
         </div>
       </div>
     </div>

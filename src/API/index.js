@@ -111,7 +111,7 @@ export const Userss = [
   },
   {
     id: 12,
-    name: "Алибек",
+    name: "Азат",
     lastName: "Осмонов",
     phone: "+996777987665",
     birth: "01.05.1990",
@@ -121,7 +121,7 @@ export const Userss = [
   },
   {
     id: 13,
-    name: "Алибек",
+    name: "Сыргак",
     lastName: "Осмонов",
     phone: "+996707233325",
     birth: "01.05.1945",
@@ -131,7 +131,7 @@ export const Userss = [
   },
   {
     id: 14,
-    name: "Алибек",
+    name: "Бакай",
     lastName: "Осмонов",
     phone: "+996775234354",
     birth: "01.05.1998",
@@ -141,7 +141,7 @@ export const Userss = [
   },
   {
     id: 15,
-    name: "Алибек",
+    name: "Бакай",
     lastName: "Осмонов",
     phone: "+996222222222",
     birth: "01.05.1989",

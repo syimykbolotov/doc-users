@@ -8,7 +8,6 @@ const Users = () => {
   const dispatch = useDispatch();
   const nav = useNavigate();
   const { user } = useSelector((s) => s.user);
-  console.log(user);
 
   useEffect(() => {
     dispatch(getUser());
@@ -21,7 +20,9 @@ const Users = () => {
           {Userss.map((u, idx) => (
             <div className="num" key={u.id}>
               <h2>{idx + 1}</h2>
-              <h3 onClick={() => nav(`/user/${u.id}`)}>{u.name}</h3>
+              <h3 onClick={() => nav(`/user/${u.id}`)}>
+                {u.name} {u.lastName}
+              </h3>
             </div>
           ))}
         </div>
