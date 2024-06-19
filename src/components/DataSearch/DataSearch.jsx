@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { MdPersonSearch } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
-
+import { TiHome } from "react-icons/ti";
 const DataSearch = () => {
   const [inputValuePin, setInputValuePin] = useState("");
   const [inputValueName, setInputValueName] = useState("");
@@ -56,15 +56,20 @@ const DataSearch = () => {
             />
           </div>
 
-          {inputValuePin ? (
-            <button onClick={searchByPin}>
-              <MdPersonSearch />
-            </button>
-          ) : (
-            <button onClick={btn}>
-              <MdPersonSearch />
-            </button>
-          )}
+          <div style={{display:"flex" ,gap:10}}>
+            {inputValuePin ? (
+              <button onClick={searchByPin}>
+                <MdPersonSearch />
+              </button>
+            ) : (
+              <button onClick={btn}>
+                <MdPersonSearch />
+              </button>
+            )}
+            <button onClick={()=> nav("")}>
+              <TiHome />
+            </button> 
+          </div>
         </div>
       </div>
     </div>

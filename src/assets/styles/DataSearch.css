@@ -19,6 +19,7 @@
   border: none;
   margin-top: 21px;
   cursor: pointer;
+  background-color: #fff;
 }
 
 .dateInput {
@@ -36,6 +37,6 @@
   border-radius: 8px;
   border: 2px solid black;
 }
-.dateInput label{
+.dateInput label {
   font-weight: 600;
 }
